@@ -1,14 +1,13 @@
-$(document).ready(function() {
-  console.log("YAYYYYYYY")
+jQuery(function() {
 if ($('.pagination').length) {
   $(window).scroll(function() {
-    var url = $('.pagination .next_page').attr('href');
+    var url = $('.pagination .next_page a').attr('href');
     if (url && $(window).scrollTop() > $(document).height() - $(window).height() - 50) {
       $('.pagination').text("Please Wait...");
       return $.getScript(url);
     }
   });
-  return $(window).scroll();
+  return ;
 }
 });
 
