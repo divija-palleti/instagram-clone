@@ -1,4 +1,4 @@
-jQuery(function() {
+$(function() {
 if ($('.pagination').length) {
   $(window).scroll(function() {
     var url = $('.pagination .next_page a').attr('href');
@@ -7,7 +7,7 @@ if ($('.pagination').length) {
       return $.getScript(url);
     }
   });
-  return ;
+  return;
 }
 });
 
