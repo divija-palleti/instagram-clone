@@ -1,12 +1,8 @@
 
-
-
-
 <div id="posts">
   <%= render @posts %>
 </div>
 </div>
 <div id="infinite-scrolling">
-<!-- <%= link_to_next_page @posts, 'LOAD MORE', remote: true, id: 'load_more' %> -->
- <%= will_paginate @posts %> 
+  <%= will_paginate @posts %> 
 </div>
