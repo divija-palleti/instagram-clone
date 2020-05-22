@@ -1,0 +1,38 @@
+<div class="user-profile">
+  <div class="profile row">
+    <div class="col-md-8 basic-info">
+      <div class="user-wrapper">
+        <h2 class="username"><%= current_user.user_name %></h2>
+      </div>
+      <ul class="posts">
+        <li><span> <%= @posts.count %></span></li>
+        <li><span>y</span> followers</li>
+        <li><span>z</span> following</li>
+      </ul>
+      <h2 class="name"><%= current_user.email %></h2>
+    </div>
+  </div>
+</div>
+
+<div class="user-tabs">
+  <a class="tab active" href="">
+    <i class="fa fa-th"></i>
+    POSTS
+  </a>
+  <a class="tab" href="">
+    <i class="fa fa-tv"></i>
+    IGTV
+  </a>
+  <a class="tab" href="">
+    <i class="fa fa-bookmark"></i>
+    SAVED
+  </a>
+  <a class="tab" href="">
+    <i class="fa fa-tag"></i>
+    TAGGED
+  </a>
+</div>
+
+<% @posts.each do |post| %>
+    <%= render 'posts/post', post: post %>
+  <% end %>
